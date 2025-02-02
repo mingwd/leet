@@ -1,0 +1,60 @@
+*   to_string(1);
+
+*   map.find(xxx) != map.end();
+
+*   __builtin_popcount(int) (2429)
+
+*   INT_MIN / INT_MAX
+
+*   int x = s[i] == '(' ? 1 : -1;
+
+*   1768
+
+*   int findGCD(int a, int b) {  // 最大公约数
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+*   priority_queue<int, vector<int>, greater<int>> minHeap; // Min-heap, by default is a max-heap.
+
+*   sort(nums.begin(), nums.end(), greater<int>()); //这是从大到小
+
+*   map<int, string, greater<int>> myMap; // Descending order
+
+*   auto [node, level] = q.front(); // queue
+
+*   // Helper function to find the peak index
+    int findPeakIndex(MountainArray &arr) {
+        int left = 0, right = arr.length() - 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (arr.get(mid) < arr.get(mid + 1)) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        return left; // Peak index
+    }
+
+********************************************************************************************************
+
+*   costs.sort(key=lambda x: x[0] - x[1]) # type costs: List[List[int]]
+
+*   Tuples are immutable (cannot be changed) and can be stored in a set, whereas lists cannot be stored in a set because they are mutable.
+
+*   import sys
+    int_max = sys.maxsize
+
+*   height = [[-1] * n for _ in range(m)]        *  math.gcd()
+
+*   defaultdict assign 0 to non-found automatically, no need to check if exist
+
+*   engineers = sorted(zip(efficiency, speed), reverse=True, key=lambda x: x[0])
+
+
+
