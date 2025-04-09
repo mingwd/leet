@@ -1,0 +1,25 @@
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        mydict = {}
+        for i in range(len(nums)):
+            if nums[i] not in mydict:
+                mydict[nums[i]] = 0
+            else:
+                mydict[nums[i]] += 1
+
+        final_list = sorted(mydict.items(), key=lambda x:x[1], reverse=True )
+
+        return final_list[0][0]
+    
+
+# 有点意思
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        count = 0
+        cand = None
+
+        for num in nums:
+            if count == 0:
+                cand = num
+            count += 1 if cand == num else -1
+        return cand
